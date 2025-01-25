@@ -58,7 +58,8 @@
                 return;
             }
 
-            var type = script.GetClassType();
+			Type classType = AssetDatabase.GetMainAssetTypeFromGUID(new GUID(GUID));
+            var type = script.GetClassType(classType);
 
             if (type == null)
             {
